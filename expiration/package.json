@@ -23,7 +23,7 @@
     "ts-jest": "^26.1.0"
   },
   "dependencies": {
-    "@jhtickets/common": "^1.0.9",
+    "@jhtickets/common": "^1.0.10",
     "@types/bull": "^3.14.0",
     "bull": "^3.15.0",
     "node-nats-streaming": "^0.3.2",
