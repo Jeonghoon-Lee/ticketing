@@ -3,6 +3,7 @@ import 'express-async-errors';
 import { json } from 'body-parser';
 import cookieSession from 'cookie-session';
 import { errorHandler, NotFoundError, currentUser } from '@jhtickets/common';
+import { createChargeRouter } from './routes/new';
 
 const app = express();
 // for ingress-iginx proxy
@@ -16,6 +17,8 @@ app.use(
   })
 );
 app.use(currentUser);
+
+app.use(createChargeRouter);
 
 // using 'express-async-errors'
 app.all('*', async (req, res) => {
